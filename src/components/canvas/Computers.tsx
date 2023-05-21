@@ -10,7 +10,20 @@ const Computers: FC = () => {
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={1} />
-      <primitive object={computer.scene} scale={2} position={[0, -4.5, -1.5]} />
+      <spotLight
+        position={[-20, 50, 10]}
+        angle={0.12}
+        penumbra={1}
+        intensity={1}
+        cashShadow
+        shadow-mapSize={1024}
+      />
+      <primitive
+        object={computer.scene}
+        scale={2.25}
+        position={[2.3, -6.5, -3.75]}
+        rotation={[-0.01, -0.2, -0.1]}
+      />
     </mesh>
   );
 };
@@ -25,6 +38,7 @@ const ComputersCanvas: FC = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+          enablePan={false}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
