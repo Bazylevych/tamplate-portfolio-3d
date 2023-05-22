@@ -19,7 +19,7 @@ const Computers: FC<ComputersProps> = ({ isMobile }: ComputersProps) => {
         angle={0.12}
         penumbra={1}
         intensity={1}
-        cashShadow
+        castShadow
         shadow-mapSize={1024}
       />
       <primitive
@@ -55,7 +55,7 @@ const ComputersCanvas: FC = () => {
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position: [20, 3, 5], fow: -100 }}
+      camera={{ position: [20, 3, 5], fov: 75 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

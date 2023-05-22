@@ -13,6 +13,7 @@
     "@emailjs/browser": "^3.11.0",
     "@react-three/drei": "^9.68.6",
     "@react-three/fiber": "^8.13.0",
+    "@types/three": "^0.152.0",
     "framer-motion": "^10.12.12",
     "maath": "^0.5.3",
     "react": "^18.2.0",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
