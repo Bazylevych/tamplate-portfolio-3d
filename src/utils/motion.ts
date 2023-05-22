@@ -64,11 +64,11 @@ export const zoomIn = (delay: unknown, duration: unknown) => {
 };
 
 export const slideIn = (
-  direction: unknown,
-  type: unknown,
-  delay: unknown,
-  duration: unknown
-) => {
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+): Variants => {
   return {
     hidden: {
       x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
