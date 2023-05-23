@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   About,
   Contact,
@@ -27,7 +28,9 @@ const App: FC = () => {
         <Feedbacks />
         <div className="relative z-0 ">
           <Contact />
-          <StarsCanvas />
+          <motion.div>
+            <StarsCanvas />
+          </motion.div>
         </div>
       </div>
     </BrowserRouter>

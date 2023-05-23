@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { EarthCanvas, StarsCanvas } from ".";
+import { EarthCanvas } from ".";
 import emailjs from "@emailjs/browser";
 
 const Contact: FC = () => {
@@ -122,12 +122,12 @@ const Contact: FC = () => {
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
       </motion.div>
     </div>
   );
 };
 
 export default function SectionWrappers() {
-  return <SectionWrapper Component={Contact} idName="about" />;
+  return <SectionWrapper Component={Contact} idName="contact" />;
 }

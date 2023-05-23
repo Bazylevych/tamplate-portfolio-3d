@@ -1,5 +1,5 @@
 import { FC, Suspense, useRef } from "react";
-import * as random from "maath/random";
+import * as random from "maath/random/dist/maath-random.cjs";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { PointMaterial, Points, Preload } from "@react-three/drei";
 import {
@@ -21,10 +21,11 @@ const Stars: FC = (props) => {
     radius: 1.2,
   }) as Float32Array;
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (ref.current) {
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;
+      ref.current.rotation.z = 0;
     }
   });
 
