@@ -1,4 +1,6 @@
-export const textVariant = (delay: unknown) => {
+import { Variants } from "framer-motion";
+
+export const textVariant = (delay?: number): Variants | undefined => {
   return {
     hidden: {
       y: -50,
@@ -17,11 +19,11 @@ export const textVariant = (delay: unknown) => {
 };
 
 export const fadeIn = (
-  direction: unknown,
-  type: unknown,
-  delay: unknown,
-  duration: unknown
-) => {
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+): Variants | undefined => {
   return {
     hidden: {
       x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -62,11 +64,11 @@ export const zoomIn = (delay: unknown, duration: unknown) => {
 };
 
 export const slideIn = (
-  direction: unknown,
-  type: unknown,
-  delay: unknown,
-  duration: unknown
-) => {
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+): Variants => {
   return {
     hidden: {
       x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
@@ -86,11 +88,10 @@ export const slideIn = (
 };
 
 export const staggerContainer = (
-  staggerChildren: unknown,
-  delayChildren: unknown
-) => {
+  staggerChildren?: number,
+  delayChildren?: number
+): Variants => {
   return {
-    hidden: {},
     show: {
       transition: {
         staggerChildren: staggerChildren,

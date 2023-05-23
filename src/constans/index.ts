@@ -24,8 +24,16 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+import {
+  IExperiences,
+  INavLinks,
+  IProjects,
+  IServices,
+  ITechnologies,
+  ITestimonials,
+} from "../models/constans";
 
-export const navLinks = [
+export const navLinks: INavLinks[] = [
   {
     id: "about",
     title: "About",
@@ -40,7 +48,7 @@ export const navLinks = [
   },
 ];
 
-const services = [
+const services: IServices[] = [
   {
     title: "Web Developer",
     icon: web,
@@ -59,7 +67,7 @@ const services = [
   },
 ];
 
-const technologies = [
+const technologies: ITechnologies[] = [
   {
     name: "HTML 5",
     icon: html,
@@ -114,7 +122,7 @@ const technologies = [
   },
 ];
 
-const experiences = [
+const experiences: IExperiences[] = [
   {
     title: "React.js Developer",
     company_name: "Starbucks",
@@ -169,7 +177,7 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+const testimonials: ITestimonials[] = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
@@ -196,7 +204,7 @@ const testimonials = [
   },
 ];
 
-const projects = [
+const projects: IProjects[] = [
   {
     name: "Car Rent",
     description:
